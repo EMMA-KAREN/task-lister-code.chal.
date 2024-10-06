@@ -41,6 +41,8 @@ keywords: Optional keywords for search engines.
 author: Optional information about the author.
 title: Defines the title of the web page, displayed in the browser tab.
 Stylesheet Link (<link rel="stylesheet" href="style.css">): Links to the external CSS file that styles the page.
+
+### code 
 Body (<body>): This section contains the visible content of the web page.
 Header (<h1>): Displays a large heading "Rehab Patient Tracking" centered on the page.
 Search Container (<div class="search-container">): Contains the search functionality.
@@ -53,6 +55,7 @@ Required fields are indicated with the required attribute.
 Patient List (<div id="patientList" class="mt-4">): Initially empty, this section will display a list of patients (populated from JavaScript).
 Footer (<footer>): Displays copyright information and contact details for the rehab tracking system.
 Script Link (<script src="script.js"></script">): Links to the external JavaScript file that handles functionalities.
+
 ### unctionality (requires JavaScript):
 
 Upon submitting the form, patient information is collected and likely stored in an array or database (handled by JavaScript).
@@ -64,7 +67,9 @@ The search input allows users to filter the displayed patients by name (implemen
 *Storing patient data persistently (e.g., using local storage or a database).
 
 ## javascrip code
-This JavaScript code provides the core functionality for a basic rehab patient tracking system. It interacts with an HTML form to:
+This JavaScript code provides the core functionality for a basic rehab patient tracking system. 
+
+### It interacts with an HTML form to:
 
 *Collect patient data: Name, guardian name, stage, progress, guardian phone number, doctor email, and priority.
 *Validate input: Ensures all required fields are filled.
@@ -78,56 +83,55 @@ This JavaScript code provides the core functionality for a basic rehab patient t
 
 ### Event Listeners:
 
-   1.Form Submission:
+ #### 1.Form Submission:
                      Prevents default form submission behavior.
                      Extracts patient data from form fields.
                      Validates input (all required fields are filled).
-    2.If editing an existing patient:
+
+ ####  2.If editing an existing patient:
                     Updates the corresponding object in the patients array.
                     clears the form and resets the editingPatientIndex flag.
                     Displays a success message and updates the patient list.
-    3.If adding a new patient:
-                    Pushes a new object with patient data to the patients array.
-                    Clears the form.
-                    Displays a success message and updates the patient list.
-    4.Search Input Keyup:
-                    Gets the search term entered in the search input field (converted to lowercase).
-                    Calls the displayPatients function with the search term.
-    5.Search Button Click (if implemented):
-                    Triggers the same functionality as the search input keyup event.
-    6.displayPatients Function:
-                Clears the existing patient list content.
-                Initializes a patientsFound flag set to false.
-                Iterates through the patients array:
-                If there's no search term or the patient's name (lowercase) includes the search term:
-                              Sets patientsFound to true.
-                             Creates a new HTML element (div) for the patient.
-                             Sets appropriate class names for the patient item and priority level.
-        Constructs HTML content for the patient, including name, guardian details, stage, progress, phone, email, and edit/delete buttons.
-         Appends the patient element to the patientList container in the HTML.
-          Attaches click event listeners to the edit and delete buttons:
-    7.Edit Button:
-           Populates the form with the selected patient's data.
-        Sets the editingPatientIndex flag to the patient's index in the array.
-        Displays the updated patient list (without hiding the current item).
-    8.Delete Button:
-         Removes the patient from the patients array based on the index.
-    9.Updates the displayed patient list.
+
+#### 3.If adding a new patient:
+Pushes a new object with patient data to the patients array.
+Clears the form.
+Displays a success message and updates the patient list.
+
+#### 4.Search Input Keyup:
+Gets the search term entered in the search input field (converted to lowercase Calls the displayPatients function with the search term.
+   
+#### 5.Search Button Click (if implemented):
+    Triggers the same functionality as the search input keyup event.
+
+ #### 6.displayPatients Function:
+ Clears the existing patient list content. Initializes a patientsFound flag set to false.Iterates through the patients array:If there's no search term or the patient's name (lowercase) includes the search term: Sets patientsFound to true.Creates a new HTML element (div) for the patient.Sets appropriate class names for the patient item and priority level.
+
+ #### buttons
+Constructs HTML content for the patient, including name, guardian details, stage, progress, phone, email, and edit/delete buttons. Appends the patient element to the patientList container in the HTML.
+Attaches click event listeners to the edit and delete buttons:
+
+#### 7.Edit Button:
+Populates the form with the selected patient's data.Sets the editingPatientIndex flag to the patient's index in the array. Displays the updated patient list (without hiding the current item).
+   
+#### 8.Delete Button:
+Removes the patient from the patients array based on the index.
+    
+#### 9.Updates the displayed patient list.
 If no patients match the search term after iterating, displays a message indicating "No patient found by that name."
 
 
-## Live server
+### Live server
 * You can view the web live on https://github.com/EMMA-KAREN/task-lister-code.chal.
-
-## Known Bugs
+### Known Bugs
 The application works perfectly well, hopefully no bugs.
 
-## Technologies Used
+### Technologies Used
 HTML, CSS , js, GIT
 
 
 
-## Support and contact details
+### Support and contact details
 Contact details (mumokaren@gmail.com, 079792951, )
 
 ### License
